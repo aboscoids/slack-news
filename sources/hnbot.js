@@ -2,12 +2,12 @@ var request = require('request');
 var async = require('async');
 var https = require('https');
 
-var BASE_URL = 'https://news.ycombinator.com/';
+var BASE_URL = 'https://news.google.com/news?pz=1&zx=gpf74cp73x84/';
 
 
 module.exports = {
 
-  aliases: ['hn', 'hackernews', 'hacker news'],
+  aliases: ['hn', 'googlenews', 'google news'],
 
   pingAndSend: function (callback) {
 
@@ -18,7 +18,7 @@ module.exports = {
 
       items = JSON.parse(items);
 
-      var botPayload = 'Current Hacker News homepage:\n'
+      var botPayload = 'Current Google News:\n'
 
       var index = 0;
       async.forEach(items, function(item, cb) {
