@@ -11,7 +11,7 @@ module.exports = {
 
   pingAndSend: function (callback) {
 
-    request('https://news.google.com/news?q=apple&output=rss', function(err, response, items) {
+    request('http://node-hnapi.herokuapp.com/news', function(err, response, items) {
       if (err || response.statusCode != 200) {
         callback(err);
       }
